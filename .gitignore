@@ -29,3 +29,5 @@ CMakeFiles/httplib.dir/DependInfo.cmake
 CMakeFiles/httplib.dir/flags.make
 CMakeFiles/httplib.dir/link.txt
 CMakeFiles/httplib.dir/progress.make
+CMakeFiles/httplib.dir/stream/SSLSocketStream.cpp.o
+CMakeFiles/httplib.dir/stream/Stream.cpp.o
