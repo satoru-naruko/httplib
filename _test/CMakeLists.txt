@@ -1,20 +1,23 @@
 cmake_minimum_required(VERSION 3.0)
 
-project(httplib)
+project(httplibtest)
+
+link_directories(../lib)
 
 set(CMAKE_CXX_STANDARD 17)
 
 find_package(OpenSSL ${_HTTPLIB_OPENSSL_MIN_VER} COMPONENTS Crypto SSL REQUIRED)
 
-ADD_LIBRARY(httplib STATIC ${CMAKE_CURRENT_SOURCE_DIR}/stream/SSLSocketStream.cpp ${CMAKE_CURRENT_SOURCE_DIR}/stream/Stream.cpp)
+ADD_EXECUTABLE(httplibtest test.cpp)
 
-target_include_directories(httplib
+target_include_directories(httplibtest
 PUBLIC
     ${OPENSSL_INCLUDE_DIR}
 )
 
-target_link_libraries(httplib
+target_link_libraries(httplibtest
 PUBLIC
+    httplib
     OpenSSL::SSL
     OpenSSL::Crypto
 )
