@@ -1,4 +1,4 @@
-#include "./SSLSocketStream.h"
+#include "SSLSocketStream.h"
 
 #include <array>
 #include <unistd.h>
