@@ -11,6 +11,6 @@ public:
     int Init();
     int Term();
 protected:
-    SSL *m_ssl;
-    SSL_CTX *m_sslContext;
+    SSL *m_ssl = nullptr;
+    SSL_CTX *m_sslContext = nullptr;
 };

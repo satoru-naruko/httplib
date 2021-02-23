@@ -16,7 +16,13 @@ SslContext::Init(void)
     SSL_library_init();
 
     m_sslContext = SSL_CTX_new(SSLv23_client_method());
+    if(m_sslContext == nullptr){
+        return -1;
+    }
     m_ssl = SSL_new(m_sslContext);
+    if (m_ssl == nullptr) {
+        return -1;
+    }
 
     SSL_CTX_set_options(m_sslContext ,
         SSL_OP_ALL | SSL_OP_NO_SSLv2 | SSL_OP_NO_SSLv3 |
