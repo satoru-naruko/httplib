@@ -12,6 +12,11 @@ m_port(port)
 {
 }
 
+Socket::~Socket()
+{
+    Close();
+}
+
 int 
 Socket::Connect()
 {
