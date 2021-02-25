@@ -130,3 +130,4 @@ build/compile_commands.json
 build/.cmake/api/v1/query/client-vscode/query.json
 .vscode/c_cpp_properties.json
 build/.cmake/api/v1/reply/*.json
+CMakeFiles/httplib.dir/socket/Socket.cpp.o
