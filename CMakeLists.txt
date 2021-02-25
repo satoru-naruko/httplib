@@ -10,6 +10,7 @@ ADD_LIBRARY(httplib STATIC
 ${CMAKE_CURRENT_SOURCE_DIR}/stream/SSLSocketStream.cpp 
 ${CMAKE_CURRENT_SOURCE_DIR}/stream/Stream.cpp
 ${CMAKE_CURRENT_SOURCE_DIR}/ssl/SslContext.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/socket/Socket.cpp
 )
 
 target_include_directories(httplib
