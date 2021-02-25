@@ -13,7 +13,17 @@
 #include <openssl/ssl.h>
 #include <openssl/err.h>
 
+#include <SSLSocketStream.h>
+#include <SslContext.h>
+
 int main(void) {
+
+    SslContext globalContext;
+    auto ret = globalContext.Init();
+    if (ret < 0){
+        printf ("Init error¥n");
+    }
+
     int mysocket;
     struct sockaddr_in server;
     struct addrinfo hints, *res;
@@ -117,6 +127,8 @@ int main(void) {
     SSL_CTX_free(ctx);
 
     close(mysocket);
+
+    globalContext.Term();
 
     return EXIT_SUCCESS;
 }
