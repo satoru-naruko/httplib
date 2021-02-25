@@ -22,3 +22,6 @@ PUBLIC
     OpenSSL::SSL
     OpenSSL::Crypto
 )
+
+install(TARGETS httplib DESTINATION "${PROJECT_SOURCE_DIR}/lib")
+
