@@ -13,6 +13,8 @@ ADD_EXECUTABLE(httplibtest test.cpp)
 target_include_directories(httplibtest
 PUBLIC
     ${OPENSSL_INCLUDE_DIR}
+    "../stream"
+    "../ssl"
 )
 
 target_link_libraries(httplibtest
