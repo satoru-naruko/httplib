@@ -8,8 +8,8 @@ public:
     SslContext();
     ~SslContext();
 
-    int Init();
-    int Term();
+    int Init(void);
+    void Term(void);
 protected:
     SSL *m_ssl = nullptr;
     SSL_CTX *m_sslContext = nullptr;

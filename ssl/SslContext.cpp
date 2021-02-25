@@ -6,7 +6,6 @@ SslContext::SslContext()
 
 SslContext::~SslContext()
 {
-    Term();
 }
 
 int 
@@ -32,12 +31,19 @@ SslContext::Init(void)
     return 0;
 }
 
-int 
-SslContext::Term()
-{
-    SSL_shutdown(m_ssl);    
-    SSL_free(m_ssl);
-    SSL_CTX_free(m_sslContext);
+void
+SslContext::Term(void)
+{    
+    if (m_ssl){
+        SSL_shutdown(m_ssl);
+        SSL_free(m_ssl);
+    }
 
-    return 0;
+    if (m_sslContext){
+        SSL_CTX_free(m_sslContext);
+    }
+
+    m_ssl = nullptr;
+    m_sslContext = nullptr;
+    
 }
