@@ -16,7 +16,27 @@
 #include <SSLSocketStream.h>
 #include <SslContext.h>
 
-int main(void) {
+#include <gtest/gtest.h>
+
+class HttpLibTest : public ::testing::Test {
+protected:
+
+    virtual void SetUp() {
+        m_num = 2;
+    }
+    int m_num;
+
+    int calc(int num){ return num * m_num;}
+};
+
+TEST_F(HttpLibTest, Function1Test) {
+    auto result = calc(5);
+    ASSERT_EQ(10, result);
+}
+
+int main(int argc, char **argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    int ret_gtest = RUN_ALL_TESTS();
 
     SslContext globalContext;
     auto ret = globalContext.Init();

@@ -119,9 +119,6 @@ build/CMakeFiles/httplib.dir/flags.make
 build/CMakeFiles/httplib.dir/link.txt
 build/CMakeFiles/httplib.dir/progress.make
 lib/libhttplib.a
-lib/libhttplib.a
-lib/libhttplib.a
-lib/libhttplib.a
 build/CMakeFiles/httplib.dir/build.make
 build/CMakeFiles/3.19.5/CompilerIdCXX/CMakeCXXCompilerId.cpp
 build/CMakeFiles/3.19.5/CompilerIdC/CMakeCCompilerId.c
@@ -130,3 +127,4 @@ build/compile_commands.json
 build/.cmake/api/v1/query/client-vscode/query.json
 .vscode/c_cpp_properties.json
 build/.cmake/api/v1/reply/*.json
+CMakeFiles/httplib.dir/socket/Socket.cpp.o
