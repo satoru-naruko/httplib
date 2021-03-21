@@ -9,7 +9,7 @@ public:
 
     int Connect(void);
     void Close(void);
-
+    int GetSocket(void) const { return m_socket; }
 protected:
     int m_socket = 0;
     std::string m_host;
