@@ -25,6 +25,7 @@ PUBLIC
     OpenSSL::Crypto
 )
 
+# install library file
 install(TARGETS httplib DESTINATION "${PROJECT_SOURCE_DIR}/lib")
 
 # install headers
