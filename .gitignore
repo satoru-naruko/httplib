@@ -133,3 +133,4 @@ build/.cmake/api/v1/reply/*.json
 CMakeFiles/httplib.dir/socket/Socket.cpp.o
 CMakeFiles/httplib.dir/httpclient/HttpsClient.cpp.o
 include/*.h
+include/*/*.h
