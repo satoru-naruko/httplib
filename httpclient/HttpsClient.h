@@ -3,10 +3,10 @@
 #include <string>
 #include <functional>
 
-#include "../stream/Stream.h"
-#include "../socket/Socket.h"
+#include <socket/Socket.h>
 
 class SslContext;
+class Stream;
 class HttpsClient
 {
 public:

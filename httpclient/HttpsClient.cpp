@@ -1,7 +1,7 @@
 #include "HttpsClient.h"
-#include "../stream/SSLSocketStream.h"
-#include "../ssl/SslContext.h"
 
+#include <stream/SSLSocketStream.h>
+#include <ssl/SslContext.h>
 
 HttpsClient::HttpsClient(std::string &host, SslContext *sslCtx, int port)
 :
