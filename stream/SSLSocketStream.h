@@ -10,7 +10,8 @@ public:
   SSLSocketStream(socket_t sock, SSL *ssl, time_t read_timeout_sec,
                   time_t read_timeout_usec, time_t write_timeout_sec,
                   time_t write_timeout_usec);
-  ~SSLSocketStream() override;
+
+  virtual ~SSLSocketStream() override;
 
   bool is_readable() const override;
   bool is_writable() const override;

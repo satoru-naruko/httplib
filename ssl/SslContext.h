@@ -10,6 +10,8 @@ public:
 
     int Init(void);
     void Term(void);
+
+    SSL * GetSSL(void) const {return m_ssl;}
 protected:
     SSL *m_ssl = nullptr;
     SSL_CTX *m_sslContext = nullptr;
