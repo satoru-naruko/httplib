@@ -7,6 +7,7 @@ link_directories(../lib)
 set(CMAKE_CXX_STANDARD 17)
 
 find_package(OpenSSL ${_HTTPLIB_OPENSSL_MIN_VER} COMPONENTS Crypto SSL REQUIRED)
+find_package(GTest REQUIRED)
 
 ADD_EXECUTABLE(httplibtest test.cpp)
 
@@ -21,4 +22,5 @@ PUBLIC
     httplib
     OpenSSL::SSL
     OpenSSL::Crypto
+    GTest::GTest
 )
