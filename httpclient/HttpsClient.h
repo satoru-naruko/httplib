@@ -3,9 +3,8 @@
 #include <string>
 #include <functional>
 
-#include <stream/Stream.h>
-#include <socket/Socket.h>
-
+#include "../stream/Stream.h"
+#include "../socket/Socket.h"
 
 class SslContext;
 class HttpsClient

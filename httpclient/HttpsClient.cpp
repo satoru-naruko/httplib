@@ -32,4 +32,21 @@ HttpsClient::Get(std::string &path, std::function<int()> resultCallback)
     if (m_stream == nullptr){
         m_stream = new SSLSocketStream(m_socket.GetSocket(), m_ssl->GetSSL(), 10, 0, 10, 0);
     }
+
+    int err = SSL_set_fd(m_ssl->GetSSL(), m_socket.GetSocket());
+    SSL_connect(m_ssl->GetSSL());
+
+    char msg[2048] = {};
+    sprintf(msg, "GET %s HTTP/1.1\r\nHost: %s\r\nConnection: Close\r\n\r\n", path.c_str(), m_host.c_str());
+
+    m_stream->write(msg, strlen(msg));
+
+    size_t read_size = 0;
+    char buf[1024]={};
+    do {
+        read_size = m_stream->read( buf, 1024);
+        write(1, buf, read_size);
+        memset(buf, 0, sizeof(buf));
+    } while(read_size > 0);
+
 }
